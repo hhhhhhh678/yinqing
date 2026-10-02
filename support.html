@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>引擎模拟器 技术支持</title>
+<style>
+  :root { --bg: #06080C; --surface: #0E131A; --text: #EEF2F6; --text-2: #A7B3C1; --accent: #FF8A1F; --line: #243040; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #F5F7FA; --surface: #FFFFFF; --text: #111820; --text-2: #4A5A6C; --accent: #C25E00; --line: #D5DCE4; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.75 -apple-system, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 26px; margin: 0 0 4px; }
+  .meta { color: var(--text-2); font-size: 14px; margin: 0 0 24px; }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 16px; margin: 10px 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  details[open] summary { color: var(--accent); margin-bottom: 6px; }
+  .contact { margin-top: 32px; padding: 14px 16px; border-left: 4px solid var(--accent); background: var(--surface); border-radius: 10px; }
+  .placeholder { background: rgba(255, 138, 31, .18); padding: 0 4px; border-radius: 4px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>引擎模拟器 · 技术支持</h1>
+  <p class="meta">免费 · 无内购 · 无广告 · 不联网 · 无需注册登录</p>
+
+  <p>“引擎模拟器”是一款发动机原理与调校的模拟工具：实时物理计算转速、扭矩、增压和温度，用 3D 剖面看活塞、曲轴和气门怎么运动，用二维图表看点火顺序、测功曲线和声音波形。下面是常见问题。</p>
+
+  <details open>
+    <summary>怎么让发动机转起来？</summary>
+    <p>在“驾驶与仪表”页<strong>长按“启动”</strong>，直到发动机着车；然后上推节气门（油门）加速、按住刹车减速，用 − / + 换挡。连接键盘时也可以用 W / ↑ 加油、S / ↓ 刹车、Q / E 换挡。</p>
+  </details>
+
+  <details>
+    <summary>为什么没有声音或声音很小？</summary>
+    <p>请先检查手机侧面的静音开关和系统音量；再到 App 的“设置 › 声音”里调整总音量、放炮音量和涡轮 / 增压器音量。“听音位置”可以在车外和车内之间切换。</p>
+  </details>
+
+  <details>
+    <summary>手机发热或画面卡顿怎么办？</summary>
+    <p>到“设置 › 运行性能”里选择“流畅”，或保持“自动”（App 会根据手机温度自动降低画质，不影响物理计算）。</p>
+  </details>
+
+  <details>
+    <summary>我的调校存档保存在哪里？换手机怎么办？</summary>
+    <p>存档只保存在你自己的手机上，不会上传。在“发动机工坊 › 调校存档”里点<strong>“导出备份”</strong>，会生成一个 JSON 备份文件，可以在系统“文件”App 的“我的 iPhone › 引擎模拟器”文件夹里找到并复制到别处；在新设备上用<strong>“从文件导入”</strong>即可恢复。旧网页版导出的备份也能直接导入。</p>
+  </details>
+
+  <details>
+    <summary>删除 App 会怎样？</summary>
+    <p>删除 App 会同时删除手机上的全部存档和设置。如果想保留，请先“导出备份”，并把备份文件复制到 App 以外的位置。</p>
+  </details>
+
+  <details>
+    <summary>为什么发动机用的是外号，不是真实品牌和型号？</summary>
+    <p>App 里的发动机用的是戏仿风格的外号，不使用任何真实品牌名称或商标。发动机参数来自公开资料，再由参数化模型计算，用于学习和娱乐，不代表任何厂商的官方数据。</p>
+  </details>
+
+  <details>
+    <summary>模拟结果和真车一样吗？</summary>
+    <p>不完全一样。App 用简化的物理模型帮助理解发动机原理和调校方向，数值是模型估算，不能作为真实车辆改装、维修或驾驶的依据。</p>
+  </details>
+
+  <details>
+    <summary>需要联网吗？会收集我的数据吗？</summary>
+    <p>不需要联网，断网也能使用全部功能。App 不收集任何个人信息，没有账号，也不含任何第三方 SDK。详见<a href="privacy-policy.html">隐私政策</a>。</p>
+  </details>
+
+  <details>
+    <summary>声音素材从哪里来？</summary>
+    <p>发动机声音由公开授权（CC0 / CC BY 4.0）的真实录音切片后按物理转速实时拼接而成，部分声音由代码实时合成。作者署名见 App 内“设置 › 关于与致谢”。</p>
+  </details>
+
+  <div class="contact">
+    <p><strong>联系我们</strong><br>遇到问题或有建议，请发邮件到：<span>biteaisupport@163.com</span><br>为了更快定位问题，请写明手机型号、iOS 版本、App 版本（在“设置 › 关于与致谢”里），以及出问题前做了哪些操作。</p>
+  </div>
+</main>
+</body>
+</html>
